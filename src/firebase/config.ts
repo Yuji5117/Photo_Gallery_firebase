@@ -1,5 +1,5 @@
-// import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
@@ -16,9 +16,9 @@ const app = initializeApp(firebaseConfig);
 
 const projectStorage = getStorage();
 const projectFirestore = getFirestore(app);
-// const projectAuth = getAuth(app);
+const auth = getAuth(app);
 
-export { projectStorage, projectFirestore };
+export { projectStorage, projectFirestore, auth };
 
 // 以下を参考にする
 // https://www.mismith.me/blog/web/firebasev9-firestore
